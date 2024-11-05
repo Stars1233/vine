@@ -280,3 +280,21 @@ export type InferInput<Schema extends { [ITYPE]: any }> = Schema[typeof ITYPE]
 export type NumericComparisonOperators = '>' | '<' | '>=' | '<='
 export type ArrayComparisonOperators = 'in' | 'notIn'
 export type ComparisonOperators = ArrayComparisonOperators | NumericComparisonOperators | '=' | '!='
+
+type PickUndefined<T> = {
+  [K in keyof T]: undefined extends T[K] ? K : never
+}[keyof T]
+
+type PickNotUndefined<T> = {
+  [K in keyof T]: undefined extends T[K] ? never : K
+}[keyof T]
+
+type Id<T> = T extends infer U ? { [K in keyof U]: U[K] } : never
+
+export type UndefinedOptional<T> = Id<
+  {
+    [K in PickUndefined<T>]?: T[K]
+  } & {
+    [K in PickNotUndefined<T>]: T[K]
+  }
+>

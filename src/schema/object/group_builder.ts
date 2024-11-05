@@ -11,7 +11,7 @@ import { ObjectGroup } from './group.js'
 import { CamelCase } from '../camelcase_types.js'
 import { GroupConditional } from './conditional.js'
 import { OTYPE, COTYPE, ITYPE } from '../../symbols.js'
-import type { FieldContext, SchemaTypes } from '../../types.js'
+import type { FieldContext, SchemaTypes, UndefinedOptional } from '../../types.js'
 
 /**
  * Create an object group. Groups are used to conditionally merge properties
@@ -32,15 +32,15 @@ group.if = function groupIf<Properties extends Record<string, SchemaTypes>>(
 ) {
   return new GroupConditional<
     Properties,
-    {
+    UndefinedOptional<{
       [K in keyof Properties]: Properties[K][typeof ITYPE]
-    },
-    {
+    }>,
+    UndefinedOptional<{
       [K in keyof Properties]: Properties[K][typeof OTYPE]
-    },
-    {
+    }>,
+    UndefinedOptional<{
       [K in keyof Properties as CamelCase<K & string>]: Properties[K][typeof COTYPE]
-    }
+    }>
   >(conditon, properties)
 }
 
@@ -52,14 +52,14 @@ group.else = function groupElse<Properties extends Record<string, SchemaTypes>>(
 ) {
   return new GroupConditional<
     Properties,
-    {
+    UndefinedOptional<{
       [K in keyof Properties]: Properties[K][typeof ITYPE]
-    },
-    {
+    }>,
+    UndefinedOptional<{
       [K in keyof Properties]: Properties[K][typeof OTYPE]
-    },
-    {
+    }>,
+    UndefinedOptional<{
       [K in keyof Properties as CamelCase<K & string>]: Properties[K][typeof COTYPE]
-    }
+    }>
   >(() => true, properties)
 }

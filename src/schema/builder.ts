@@ -27,7 +27,13 @@ import { group } from './object/group_builder.js'
 import { VineNativeEnum } from './enum/native_enum.js'
 import { VineUnionOfTypes } from './union_of_types/main.js'
 import { ITYPE, OTYPE, COTYPE, IS_OF_TYPE, UNIQUE_NAME } from '../symbols.js'
-import type { DateFieldOptions, EnumLike, FieldContext, SchemaTypes } from '../types.js'
+import type {
+  UndefinedOptional,
+  DateFieldOptions,
+  EnumLike,
+  FieldContext,
+  SchemaTypes,
+} from '../types.js'
 
 /**
  * Schema builder exposes methods to construct a Vine schema. You may
@@ -94,15 +100,15 @@ export class SchemaBuilder extends Macroable {
   object<Properties extends Record<string, SchemaTypes>>(properties: Properties) {
     return new VineObject<
       Properties,
-      {
+      UndefinedOptional<{
         [K in keyof Properties]: Properties[K][typeof ITYPE]
-      },
-      {
+      }>,
+      UndefinedOptional<{
         [K in keyof Properties]: Properties[K][typeof OTYPE]
-      },
-      {
+      }>,
+      UndefinedOptional<{
         [K in keyof Properties as CamelCase<K & string>]: Properties[K][typeof COTYPE]
-      }
+      }>
     >(properties)
   }
 
