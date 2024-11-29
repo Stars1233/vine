@@ -46,6 +46,20 @@ test.group('Enum', () => {
       role: 'admin',
     })
   })
+
+  test('allow enum to be nullable', async ({ assert }) => {
+    const schema = vine.object({
+      role: vine.enum(['admin', 'moderator', 'owner', 'user']).nullable(),
+    })
+
+    const data = {
+      role: null,
+    }
+
+    await assert.validationOutput(vine.validate({ schema, data }), {
+      role: null,
+    })
+  })
 })
 
 test.group('Enum | Native enum', () => {
