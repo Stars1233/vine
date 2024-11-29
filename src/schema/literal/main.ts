@@ -10,6 +10,7 @@
 import { equalsRule } from './rules.js'
 import { BaseLiteralType } from '../base/literal.js'
 import type { FieldOptions, Validation } from '../../types.js'
+import { SUBTYPE } from '../../symbols.js'
 
 /**
  * VineLiteral represents a type that matches an exact value
@@ -22,7 +23,12 @@ export class VineLiteral<Value> extends BaseLiteralType<Value, Value, Value> {
     equals: equalsRule,
   }
 
-  #value: Value
+  #value: Value;
+
+  /**
+   * The subtype of the literal schema field
+   */
+  [SUBTYPE] = 'literal'
 
   constructor(value: Value, options?: FieldOptions, validations?: Validation<any>[]) {
     super(options, validations || [equalsRule({ expectedValue: value })])

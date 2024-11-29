@@ -10,7 +10,7 @@
 import { helpers } from '../../vine/helpers.js'
 import { BaseLiteralType } from '../base/literal.js'
 import { FieldOptions, Validation } from '../../types.js'
-import { IS_OF_TYPE, UNIQUE_NAME } from '../../symbols.js'
+import { IS_OF_TYPE, SUBTYPE, UNIQUE_NAME } from '../../symbols.js'
 
 import {
   maxRule,
@@ -44,6 +44,11 @@ export class VineNumber extends BaseLiteralType<string | number, number, number>
     positive: positiveRule,
     withoutDecimals: withoutDecimalsRule,
   };
+
+  /**
+   * The subtype of the literal schema field
+   */
+  [SUBTYPE] = 'number';
 
   /**
    * The property must be implemented for "unionOfTypes"

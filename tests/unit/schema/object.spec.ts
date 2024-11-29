@@ -55,6 +55,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -95,6 +96,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -135,6 +137,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -175,6 +178,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -215,6 +219,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -274,6 +279,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -290,6 +296,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'name',
                     propertyName: 'name',
                     bail: true,
@@ -306,6 +313,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'price',
                     propertyName: 'price',
                     bail: true,
@@ -331,6 +339,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -355,6 +364,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -371,6 +381,7 @@ test.group('VineObject', () => {
         },
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'password',
           propertyName: 'password',
           bail: true,
@@ -443,6 +454,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'hiring_guide',
                     propertyName: 'hiring_guide',
                     bail: true,
@@ -459,6 +471,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'guide_name',
                     propertyName: 'guide_name',
                     bail: true,
@@ -475,6 +488,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'fees',
                     propertyName: 'fees',
                     bail: true,
@@ -500,6 +514,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'hiring_guide',
                     propertyName: 'hiring_guide',
                     bail: true,
@@ -531,6 +546,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'monument',
                     propertyName: 'monument',
                     bail: true,
@@ -547,6 +563,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'enum',
                     fieldName: 'available_transport',
                     propertyName: 'available_transport',
                     bail: true,
@@ -563,6 +580,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'has_free_entry',
                     propertyName: 'has_free_entry',
                     bail: true,
@@ -588,6 +606,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'monument',
                     propertyName: 'monument',
                     bail: true,
@@ -604,6 +623,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'enum',
                     fieldName: 'available_transport',
                     propertyName: 'available_transport',
                     bail: true,
@@ -620,6 +640,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'has_free_entry',
                     propertyName: 'has_free_entry',
                     bail: true,
@@ -644,6 +665,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'visitor_name',
           propertyName: 'visitor_name',
           bail: true,
@@ -709,6 +731,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -725,6 +748,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'name',
                     propertyName: 'name',
                     bail: true,
@@ -741,6 +765,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'price',
                     propertyName: 'price',
                     bail: true,
@@ -766,6 +791,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -790,6 +816,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -806,6 +833,7 @@ test.group('VineObject', () => {
         },
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'password',
           propertyName: 'password',
           bail: true,
@@ -860,6 +888,7 @@ test.group('VineObject', () => {
           properties: [
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'username',
               propertyName: 'username',
               bail: true,
@@ -876,6 +905,7 @@ test.group('VineObject', () => {
             },
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'password',
               propertyName: 'password',
               bail: true,
@@ -922,6 +952,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: 'post_id',
           propertyName: 'postId',
           bail: true,
@@ -950,6 +981,7 @@ test.group('VineObject', () => {
           properties: [
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'user_name',
               propertyName: 'userName',
               bail: true,
@@ -966,6 +998,7 @@ test.group('VineObject', () => {
             },
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'pass_word',
               propertyName: 'passWord',
               bail: true,
@@ -1012,6 +1045,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: 'post_id',
           propertyName: 'post_id',
           bail: true,
@@ -1040,6 +1074,7 @@ test.group('VineObject', () => {
           properties: [
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'user_name',
               propertyName: 'userName',
               bail: true,
@@ -1056,6 +1091,7 @@ test.group('VineObject', () => {
             },
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'pass_word',
               propertyName: 'passWord',
               bail: true,
@@ -1118,6 +1154,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'isHiringGuide',
                     bail: true,
@@ -1134,6 +1171,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'name',
                     propertyName: 'name',
                     bail: true,
@@ -1150,6 +1188,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'price',
                     propertyName: 'price',
                     bail: true,
@@ -1175,6 +1214,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'isHiringGuide',
                     bail: true,
@@ -1199,6 +1239,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -1215,6 +1256,7 @@ test.group('VineObject', () => {
         },
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'password',
           propertyName: 'password',
           bail: true,
@@ -1288,6 +1330,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'hiring_guide',
                     propertyName: 'hiringGuide',
                     bail: true,
@@ -1304,6 +1347,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'guide_name',
                     propertyName: 'guideName',
                     bail: true,
@@ -1320,6 +1364,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'fees',
                     propertyName: 'fees',
                     bail: true,
@@ -1345,6 +1390,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'hiring_guide',
                     propertyName: 'hiringGuide',
                     bail: true,
@@ -1376,6 +1422,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'monument',
                     propertyName: 'monument',
                     bail: true,
@@ -1392,6 +1439,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'enum',
                     fieldName: 'available_transport',
                     propertyName: 'availableTransport',
                     bail: true,
@@ -1408,6 +1456,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'has_free_entry',
                     propertyName: 'hasFreeEntry',
                     bail: true,
@@ -1433,6 +1482,7 @@ test.group('VineObject', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'monument',
                     propertyName: 'monument',
                     bail: true,
@@ -1449,6 +1499,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'enum',
                     fieldName: 'available_transport',
                     propertyName: 'availableTransport',
                     bail: true,
@@ -1465,6 +1516,7 @@ test.group('VineObject', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'has_free_entry',
                     propertyName: 'hasFreeEntry',
                     bail: true,
@@ -1489,6 +1541,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'visitor_name',
           propertyName: 'visitorName',
           bail: true,
@@ -1533,6 +1586,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: 'post_id',
           propertyName: 'postId',
           bail: true,
@@ -1561,6 +1615,7 @@ test.group('VineObject', () => {
           properties: [
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'user_name',
               propertyName: 'userName',
               bail: true,
@@ -1577,6 +1632,7 @@ test.group('VineObject', () => {
             },
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'pass_word',
               propertyName: 'passWord',
               bail: true,
@@ -1643,6 +1699,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: 'post_id',
           propertyName: 'postId',
           bail: true,
@@ -1671,6 +1728,7 @@ test.group('VineObject', () => {
           properties: [
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'user_name',
               propertyName: 'userName',
               bail: true,
@@ -1687,6 +1745,7 @@ test.group('VineObject', () => {
             },
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'pass_word',
               propertyName: 'passWord',
               bail: true,
@@ -1734,6 +1793,7 @@ test.group('VineObject', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: 'post_id',
           propertyName: 'postId',
           bail: true,
@@ -1762,6 +1822,7 @@ test.group('VineObject', () => {
           properties: [
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'user_name',
               propertyName: 'userName',
               bail: true,
@@ -1778,6 +1839,7 @@ test.group('VineObject', () => {
             },
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'pass_word',
               propertyName: 'passWord',
               bail: true,
@@ -1881,6 +1943,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -1912,6 +1975,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -1928,6 +1992,7 @@ test.group('VineObject | clone', () => {
         },
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'password',
           propertyName: 'password',
           bail: true,
@@ -1968,6 +2033,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -1999,6 +2065,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -2038,6 +2105,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -2069,6 +2137,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -2109,6 +2178,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -2140,6 +2210,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -2179,6 +2250,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -2209,6 +2281,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -2259,6 +2332,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -2275,6 +2349,7 @@ test.group('VineObject | clone', () => {
         },
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'password',
           propertyName: 'password',
           bail: true,
@@ -2314,6 +2389,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -2330,6 +2406,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'name',
                     propertyName: 'name',
                     bail: true,
@@ -2346,6 +2423,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'price',
                     propertyName: 'price',
                     bail: true,
@@ -2371,6 +2449,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -2395,6 +2474,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -2411,6 +2491,7 @@ test.group('VineObject | clone', () => {
         },
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'password',
           propertyName: 'password',
           bail: true,
@@ -2482,6 +2563,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'hiring_guide',
                     propertyName: 'hiring_guide',
                     bail: true,
@@ -2498,6 +2580,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'guide_name',
                     propertyName: 'guide_name',
                     bail: true,
@@ -2514,6 +2597,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'fees',
                     propertyName: 'fees',
                     bail: true,
@@ -2539,6 +2623,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'hiring_guide',
                     propertyName: 'hiring_guide',
                     bail: true,
@@ -2563,6 +2648,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'visitor_name',
           propertyName: 'visitor_name',
           bail: true,
@@ -2602,6 +2688,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'monument',
                     propertyName: 'monument',
                     bail: true,
@@ -2618,6 +2705,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'enum',
                     fieldName: 'available_transport',
                     propertyName: 'available_transport',
                     bail: true,
@@ -2634,6 +2722,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'has_free_entry',
                     propertyName: 'has_free_entry',
                     bail: true,
@@ -2659,6 +2748,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'monument',
                     propertyName: 'monument',
                     bail: true,
@@ -2675,6 +2765,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'enum',
                     fieldName: 'available_transport',
                     propertyName: 'available_transport',
                     bail: true,
@@ -2691,6 +2782,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'has_free_entry',
                     propertyName: 'has_free_entry',
                     bail: true,
@@ -2715,6 +2807,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'visitor_name',
           propertyName: 'visitor_name',
           bail: true,
@@ -2758,6 +2851,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: 'post_id',
           propertyName: 'post_id',
           bail: true,
@@ -2786,6 +2880,7 @@ test.group('VineObject | clone', () => {
           properties: [
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'user_name',
               propertyName: 'user_name',
               bail: true,
@@ -2802,6 +2897,7 @@ test.group('VineObject | clone', () => {
             },
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'pass_word',
               propertyName: 'pass_word',
               bail: true,
@@ -2835,6 +2931,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: 'post_id',
           propertyName: 'postId',
           bail: true,
@@ -2863,6 +2960,7 @@ test.group('VineObject | clone', () => {
           properties: [
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'user_name',
               propertyName: 'userName',
               bail: true,
@@ -2879,6 +2977,7 @@ test.group('VineObject | clone', () => {
             },
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'pass_word',
               propertyName: 'passWord',
               bail: true,
@@ -2926,6 +3025,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: 'post_id',
           propertyName: 'postId',
           bail: true,
@@ -2954,6 +3054,7 @@ test.group('VineObject | clone', () => {
           properties: [
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'user_name',
               propertyName: 'userName',
               bail: true,
@@ -2970,6 +3071,7 @@ test.group('VineObject | clone', () => {
             },
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'pass_word',
               propertyName: 'passWord',
               bail: true,
@@ -3003,6 +3105,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'user_name',
           propertyName: 'user_name',
           bail: true,
@@ -3019,6 +3122,7 @@ test.group('VineObject | clone', () => {
         },
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'pass_word',
           propertyName: 'pass_word',
           bail: true,
@@ -3084,6 +3188,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -3100,6 +3205,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'name',
                     propertyName: 'name',
                     bail: true,
@@ -3116,6 +3222,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'price',
                     propertyName: 'price',
                     bail: true,
@@ -3141,6 +3248,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -3165,6 +3273,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -3181,6 +3290,7 @@ test.group('VineObject | clone', () => {
         },
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'password',
           propertyName: 'password',
           bail: true,
@@ -3220,6 +3330,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -3236,6 +3347,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'name',
                     propertyName: 'name',
                     bail: true,
@@ -3252,6 +3364,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'price',
                     propertyName: 'price',
                     bail: true,
@@ -3277,6 +3390,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -3301,6 +3415,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -3317,6 +3432,7 @@ test.group('VineObject | clone', () => {
         },
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'password',
           propertyName: 'password',
           bail: true,
@@ -3381,6 +3497,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -3397,6 +3514,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'name',
                     propertyName: 'name',
                     bail: true,
@@ -3413,6 +3531,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'price',
                     propertyName: 'price',
                     bail: true,
@@ -3438,6 +3557,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -3462,6 +3582,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -3478,6 +3599,7 @@ test.group('VineObject | clone', () => {
         },
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'password',
           propertyName: 'password',
           bail: true,
@@ -3517,6 +3639,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -3533,6 +3656,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'name',
                     propertyName: 'name',
                     bail: true,
@@ -3549,6 +3673,7 @@ test.group('VineObject | clone', () => {
                   },
                   {
                     type: 'literal',
+                    subtype: 'string',
                     fieldName: 'price',
                     propertyName: 'price',
                     bail: true,
@@ -3574,6 +3699,7 @@ test.group('VineObject | clone', () => {
                 properties: [
                   {
                     type: 'literal',
+                    subtype: 'literal',
                     fieldName: 'is_hiring_guide',
                     propertyName: 'is_hiring_guide',
                     bail: true,
@@ -3598,6 +3724,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -3614,6 +3741,7 @@ test.group('VineObject | clone', () => {
         },
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'password',
           propertyName: 'password',
           bail: true,
@@ -3659,6 +3787,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: 'post_id',
           propertyName: 'postId',
           bail: true,
@@ -3687,6 +3816,7 @@ test.group('VineObject | clone', () => {
           properties: [
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'user_name',
               propertyName: 'userName',
               bail: true,
@@ -3703,6 +3833,7 @@ test.group('VineObject | clone', () => {
             },
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'pass_word',
               propertyName: 'passWord',
               bail: true,
@@ -3736,6 +3867,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: 'post_id',
           propertyName: 'postId',
           bail: true,
@@ -3764,6 +3896,7 @@ test.group('VineObject | clone', () => {
           properties: [
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'user_name',
               propertyName: 'userName',
               bail: true,
@@ -3780,6 +3913,7 @@ test.group('VineObject | clone', () => {
             },
             {
               type: 'literal',
+              subtype: 'string',
               fieldName: 'pass_word',
               propertyName: 'passWord',
               bail: true,
@@ -3824,6 +3958,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -3855,6 +3990,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -3897,6 +4033,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -3928,6 +4065,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -3970,6 +4108,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,
@@ -4001,6 +4140,7 @@ test.group('VineObject | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: 'username',
           propertyName: 'username',
           bail: true,

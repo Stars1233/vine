@@ -42,3 +42,8 @@ export const COTYPE = Symbol.for('camelcase_opaque_type')
  * The symbol to generate a validation rule from rule builder
  */
 export const VALIDATION = Symbol.for('to_validation')
+
+/**
+ * The symbol for the subtype of a literal field
+ */
+export const SUBTYPE = Symbol.for('subtype')

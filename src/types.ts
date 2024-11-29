@@ -17,9 +17,14 @@ import type { IsMobilePhoneOptions, MobilePhoneLocale } from 'validator/lib/isMo
 import type {
   ParseFn,
   RefsStore,
+  TupleNode,
+  ArrayNode,
+  UnionNode,
+  RecordNode,
+  ObjectNode,
   TransformFn,
+  LiteralNode,
   FieldContext,
-  CompilerNodes,
   MessagesProviderContact,
   ErrorReporterContract as BaseReporter,
 } from '@vinejs/compiler/types'
@@ -27,6 +32,17 @@ import type {
 import type { helpers } from './vine/helpers.js'
 import type { ValidationError } from './errors/validation_error.js'
 import type { OTYPE, COTYPE, PARSE, VALIDATION, UNIQUE_NAME, IS_OF_TYPE, ITYPE } from './symbols.js'
+
+/**
+ * Compiler nodes emitted by Vine
+ */
+export type CompilerNodes =
+  | (LiteralNode & { subtype: string })
+  | ObjectNode
+  | ArrayNode
+  | UnionNode
+  | RecordNode
+  | TupleNode
 
 /**
  * Options accepted by the mobile number validation

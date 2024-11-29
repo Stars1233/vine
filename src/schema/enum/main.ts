@@ -10,6 +10,7 @@
 import { enumRule } from './rules.js'
 import { BaseLiteralType } from '../base/literal.js'
 import type { FieldContext, FieldOptions, Validation } from '../../types.js'
+import { SUBTYPE } from '../../symbols.js'
 
 /**
  * VineEnum represents a enum data type that performs validation
@@ -27,7 +28,12 @@ export class VineEnum<const Values extends readonly unknown[]> extends BaseLiter
     enum: enumRule,
   }
 
-  #values: Values | ((field: FieldContext) => Values)
+  #values: Values | ((field: FieldContext) => Values);
+
+  /**
+   * The subtype of the literal schema field
+   */
+  [SUBTYPE] = 'enum'
 
   /**
    * Returns the enum choices

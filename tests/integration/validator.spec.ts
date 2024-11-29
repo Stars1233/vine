@@ -254,6 +254,7 @@ test.group('Validator | toJSON', () => {
                 "isOptional": false,
                 "parseFnId": undefined,
                 "propertyName": "name",
+                "subtype": "string",
                 "type": "literal",
                 "validations": [
                   {
@@ -270,6 +271,7 @@ test.group('Validator | toJSON', () => {
                 "isOptional": false,
                 "parseFnId": undefined,
                 "propertyName": "email",
+                "subtype": "string",
                 "type": "literal",
                 "validations": [
                   {
@@ -291,6 +293,7 @@ test.group('Validator | toJSON', () => {
                 "isOptional": false,
                 "parseFnId": undefined,
                 "propertyName": "role",
+                "subtype": "string",
                 "type": "literal",
                 "validations": [
                   {

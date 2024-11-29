@@ -34,6 +34,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: '*',
             type: 'literal',
+            subtype: 'boolean',
             validations: [
               {
                 implicit: false,
@@ -53,6 +54,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: '*',
             type: 'literal',
+            subtype: 'string',
             validations: [
               {
                 implicit: false,
@@ -86,6 +88,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: '*',
             type: 'literal',
+            subtype: 'boolean',
             validations: [
               {
                 implicit: false,
@@ -105,6 +108,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: '*',
             type: 'literal',
+            subtype: 'string',
             validations: [
               {
                 implicit: false,
@@ -132,6 +136,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: '*',
             type: 'literal',
+            subtype: 'boolean',
             validations: [
               {
                 implicit: false,
@@ -151,6 +156,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: '*',
             type: 'literal',
+            subtype: 'string',
             validations: [
               {
                 implicit: false,
@@ -183,6 +189,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: 'healthCheck',
             type: 'literal',
+            subtype: 'boolean',
             validations: [
               {
                 implicit: false,
@@ -202,6 +209,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: 'healthCheck',
             type: 'literal',
+            subtype: 'string',
             validations: [
               {
                 implicit: false,
@@ -235,6 +243,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: '*',
             type: 'literal',
+            subtype: 'boolean',
             validations: [
               {
                 implicit: false,
@@ -254,6 +263,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: '*',
             type: 'literal',
+            subtype: 'string',
             validations: [
               {
                 implicit: false,
@@ -281,6 +291,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: '*',
             type: 'literal',
+            subtype: 'boolean',
             validations: [
               {
                 implicit: false,
@@ -300,6 +311,7 @@ test.group('Vine UnionOfTypes', () => {
             parseFnId: undefined,
             propertyName: '*',
             type: 'literal',
+            subtype: 'string',
             validations: [
               {
                 implicit: false,

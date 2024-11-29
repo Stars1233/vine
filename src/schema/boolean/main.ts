@@ -10,7 +10,7 @@
 import { booleanRule } from './rules.js'
 import { helpers } from '../../vine/helpers.js'
 import { BaseLiteralType } from '../base/literal.js'
-import { IS_OF_TYPE, UNIQUE_NAME } from '../../symbols.js'
+import { IS_OF_TYPE, SUBTYPE, UNIQUE_NAME } from '../../symbols.js'
 import type { FieldOptions, Validation } from '../../types.js'
 
 /**
@@ -25,6 +25,11 @@ export class VineBoolean extends BaseLiteralType<boolean | string | number, bool
   }
 
   declare protected options: FieldOptions & { strict?: boolean };
+
+  /**
+   * The subtype of the literal schema field
+   */
+  [SUBTYPE] = 'boolean';
 
   /**
    * The property must be implemented for "unionOfTypes"

@@ -51,6 +51,7 @@ test.group('VineTuple', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -86,6 +87,7 @@ test.group('VineTuple', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -121,6 +123,7 @@ test.group('VineTuple', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -137,6 +140,7 @@ test.group('VineTuple', () => {
         },
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: '1',
           propertyName: '1',
           bail: true,
@@ -172,6 +176,7 @@ test.group('VineTuple', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -207,6 +212,7 @@ test.group('VineTuple', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -242,6 +248,7 @@ test.group('VineTuple', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -277,6 +284,7 @@ test.group('VineTuple', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -357,6 +365,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -387,6 +396,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -423,6 +433,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -453,6 +464,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -489,6 +501,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -505,6 +518,7 @@ test.group('VineTuple | clone', () => {
         },
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: '1',
           propertyName: '1',
           bail: true,
@@ -534,6 +548,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -550,6 +565,7 @@ test.group('VineTuple | clone', () => {
         },
         {
           type: 'literal',
+          subtype: 'number',
           fieldName: '1',
           propertyName: '1',
           bail: true,
@@ -586,6 +602,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -616,6 +633,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -652,6 +670,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -682,6 +701,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -718,6 +738,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -748,6 +769,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -784,6 +806,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -814,6 +837,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -850,6 +874,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -880,6 +905,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -916,6 +942,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,
@@ -946,6 +973,7 @@ test.group('VineTuple | clone', () => {
       properties: [
         {
           type: 'literal',
+          subtype: 'string',
           fieldName: '0',
           propertyName: '0',
           bail: true,

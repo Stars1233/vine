@@ -62,6 +62,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -78,6 +79,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'account_id',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -111,6 +113,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -127,6 +130,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'email',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -160,6 +164,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -176,6 +181,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'project_url',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -243,6 +249,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -259,6 +266,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'account_id',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -292,6 +300,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -308,6 +317,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'email',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -341,6 +351,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -357,6 +368,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'project_url',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -429,6 +441,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -445,6 +458,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'account_id',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -478,6 +492,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -494,6 +509,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'email',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -527,6 +543,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -543,6 +560,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'project_url',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -585,6 +603,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -601,6 +620,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'account_id',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -634,6 +654,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -650,6 +671,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'email',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -683,6 +705,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -699,6 +722,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'project_url',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -769,6 +793,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -785,6 +810,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'accountId',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -818,6 +844,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -834,6 +861,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'email',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -867,6 +895,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -883,6 +912,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'projectUrl',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -954,6 +984,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -970,6 +1001,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'account_id',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -1003,6 +1035,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -1019,6 +1052,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'email',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -1052,6 +1086,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -1068,6 +1103,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'project_url',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -1110,6 +1146,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -1126,6 +1163,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'account_id',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -1159,6 +1197,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -1175,6 +1214,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'email',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,
@@ -1208,6 +1248,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'type',
                 type: 'literal',
+                subtype: 'literal',
                 validations: [
                   {
                     implicit: false,
@@ -1224,6 +1265,7 @@ test.group('Vine Union', () => {
                 parseFnId: undefined,
                 propertyName: 'project_url',
                 type: 'literal',
+                subtype: 'string',
                 validations: [
                   {
                     implicit: false,

@@ -20,6 +20,7 @@ test.group('VineAccepted', () => {
     const schema = vine.accepted()
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -41,6 +42,7 @@ test.group('VineAccepted', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: true,
@@ -62,6 +64,7 @@ test.group('VineAccepted', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -83,6 +86,7 @@ test.group('VineAccepted', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -103,6 +107,7 @@ test.group('VineAccepted', () => {
     const schema = vine.accepted().parse(() => {})
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -123,6 +128,7 @@ test.group('VineAccepted', () => {
     const schema = vine.accepted().transform(() => {})
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -148,6 +154,7 @@ test.group('VineAccepted | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -164,6 +171,7 @@ test.group('VineAccepted | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -186,6 +194,7 @@ test.group('VineAccepted | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -202,6 +211,7 @@ test.group('VineAccepted | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: true,
@@ -224,6 +234,7 @@ test.group('VineAccepted | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -240,6 +251,7 @@ test.group('VineAccepted | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -262,6 +274,7 @@ test.group('VineAccepted | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -278,6 +291,7 @@ test.group('VineAccepted | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -300,6 +314,7 @@ test.group('VineAccepted | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -317,6 +332,7 @@ test.group('VineAccepted | clone', () => {
 
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -340,6 +356,7 @@ test.group('VineAccepted | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -356,6 +373,7 @@ test.group('VineAccepted | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'checkbox',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,

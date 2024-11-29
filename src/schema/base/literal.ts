@@ -11,7 +11,7 @@ import camelcase from 'camelcase'
 import Macroable from '@poppinss/macroable'
 import type { LiteralNode, RefsStore } from '@vinejs/compiler/types'
 
-import { OTYPE, COTYPE, PARSE, VALIDATION, ITYPE } from '../../symbols.js'
+import { OTYPE, COTYPE, PARSE, VALIDATION, ITYPE, SUBTYPE } from '../../symbols.js'
 import type {
   Parser,
   Validation,
@@ -39,7 +39,11 @@ abstract class BaseModifiersType<Input, Output, CamelCaseOutput>
    * Each subtype should implement the compile method that returns
    * one of the known compiler nodes
    */
-  abstract [PARSE](propertyName: string, refs: RefsStore, options: ParserOptions): LiteralNode
+  abstract [PARSE](
+    propertyName: string,
+    refs: RefsStore,
+    options: ParserOptions
+  ): LiteralNode & { subtype: string }
 
   /**
    * The child class must implement the clone method
@@ -116,7 +120,11 @@ export class NullableModifier<
   /**
    * Compiles to compiler node
    */
-  [PARSE](propertyName: string, refs: RefsStore, options: ParserOptions): LiteralNode {
+  [PARSE](
+    propertyName: string,
+    refs: RefsStore,
+    options: ParserOptions
+  ): LiteralNode & { subtype: string } {
     const output = this.#parent[PARSE](propertyName, refs, options)
     output.allowNull = true
     return output
@@ -327,7 +335,11 @@ export class OptionalModifier<
   /**
    * Compiles to compiler node
    */
-  [PARSE](propertyName: string, refs: RefsStore, options: ParserOptions): LiteralNode {
+  [PARSE](
+    propertyName: string,
+    refs: RefsStore,
+    options: ParserOptions
+  ): LiteralNode & { subtype: string } {
     const output = this.#parent[PARSE](propertyName, refs, options)
     output.isOptional = true
     output.validations = output.validations.concat(this.compileValidations(refs))
@@ -369,7 +381,11 @@ export class TransformModifier<
   /**
    * Compiles to compiler node
    */
-  [PARSE](propertyName: string, refs: RefsStore, options: ParserOptions): LiteralNode {
+  [PARSE](
+    propertyName: string,
+    refs: RefsStore,
+    options: ParserOptions
+  ): LiteralNode & { subtype: string } {
     const output = this.#parent[PARSE](propertyName, refs, options)
     output.transformFnId = refs.trackTransformer(this.#transform)
     return output
@@ -385,6 +401,11 @@ export abstract class BaseLiteralType<Input, Output, CamelCaseOutput> extends Ba
   Output,
   CamelCaseOutput
 > {
+  /**
+   * Specify the subtype of the literal schema field
+   */
+  abstract [SUBTYPE]: string
+
   /**
    * The child class must implement the clone method
    */
@@ -479,9 +500,14 @@ export abstract class BaseLiteralType<Input, Output, CamelCaseOutput> extends Ba
   /**
    * Compiles the schema type to a compiler node
    */
-  [PARSE](propertyName: string, refs: RefsStore, options: ParserOptions): LiteralNode {
+  [PARSE](
+    propertyName: string,
+    refs: RefsStore,
+    options: ParserOptions
+  ): LiteralNode & { subtype: string } {
     return {
       type: 'literal',
+      subtype: this[SUBTYPE],
       fieldName: propertyName,
       propertyName: options.toCamelCase ? camelcase(propertyName) : propertyName,
       bail: this.options.bail,

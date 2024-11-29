@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import type { CompilerNodes, RefsStore } from '@vinejs/compiler/types'
+import type { RefsStore } from '@vinejs/compiler/types'
 
 import { ITYPE, OTYPE, COTYPE, PARSE, VALIDATION } from '../../symbols.js'
 import type {
@@ -15,6 +15,7 @@ import type {
   Validation,
   RuleBuilder,
   FieldOptions,
+  CompilerNodes,
   ParserOptions,
   ConstructableSchema,
 } from '../../types.js'

@@ -35,6 +35,7 @@ test.group('VineDate', () => {
     const schema = vine.date()
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -56,6 +57,7 @@ test.group('VineDate', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: true,
@@ -77,6 +79,7 @@ test.group('VineDate', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -98,6 +101,7 @@ test.group('VineDate', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -119,6 +123,7 @@ test.group('VineDate', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -144,6 +149,7 @@ test.group('VineDate', () => {
     const schema = vine.date().transform(() => {})
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -165,6 +171,7 @@ test.group('VineDate', () => {
     const schema = vine.date().parse(() => {})
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -200,6 +207,7 @@ test.group('VineDate | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -216,6 +224,7 @@ test.group('VineDate | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -238,6 +247,7 @@ test.group('VineDate | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -254,6 +264,7 @@ test.group('VineDate | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: true,
@@ -276,6 +287,7 @@ test.group('VineDate | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -292,6 +304,7 @@ test.group('VineDate | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -314,6 +327,7 @@ test.group('VineDate | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -330,6 +344,7 @@ test.group('VineDate | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -352,6 +367,7 @@ test.group('VineDate | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -373,6 +389,7 @@ test.group('VineDate | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -405,6 +422,7 @@ test.group('VineDate | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -422,6 +440,7 @@ test.group('VineDate | clone', () => {
 
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -445,6 +464,7 @@ test.group('VineDate | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -461,6 +481,7 @@ test.group('VineDate | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -485,6 +506,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -518,6 +540,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -551,6 +574,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -584,6 +608,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -617,6 +642,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -650,6 +676,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -683,6 +710,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -716,6 +744,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -749,6 +778,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -782,6 +812,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -815,6 +846,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -848,6 +880,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,
@@ -881,6 +914,7 @@ test.group('VineDate | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'date',
       fieldName: '*',
       propertyName: '*',
       bail: true,

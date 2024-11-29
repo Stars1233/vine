@@ -10,6 +10,7 @@
 import { acceptedRule } from './rules.js'
 import { BaseLiteralType } from '../base/literal.js'
 import type { FieldOptions, Validation } from '../../types.js'
+import { SUBTYPE } from '../../symbols.js'
 
 /**
  * VineAccepted represents a checkbox input that must be checked
@@ -24,7 +25,12 @@ export class VineAccepted extends BaseLiteralType<
    */
   static rules = {
     accepted: acceptedRule,
-  }
+  };
+
+  /**
+   * The subtype of the literal schema field
+   */
+  [SUBTYPE] = 'checkbox'
 
   constructor(options?: Partial<FieldOptions>, validations?: Validation<any>[]) {
     super(options, validations || [acceptedRule()])

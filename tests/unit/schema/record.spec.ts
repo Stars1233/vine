@@ -53,6 +53,7 @@ test.group('VineRecord', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -69,6 +70,7 @@ test.group('VineRecord', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -121,6 +123,7 @@ test.group('VineRecord', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -137,6 +140,7 @@ test.group('VineRecord', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -189,6 +193,7 @@ test.group('VineRecord', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -205,6 +210,7 @@ test.group('VineRecord', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -257,6 +263,7 @@ test.group('VineRecord', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -273,6 +280,7 @@ test.group('VineRecord', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -325,6 +333,7 @@ test.group('VineRecord', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -341,6 +350,7 @@ test.group('VineRecord', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -393,6 +403,7 @@ test.group('VineRecord', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -409,6 +420,7 @@ test.group('VineRecord', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -474,6 +486,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -490,6 +503,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -530,6 +544,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -546,6 +561,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -597,6 +613,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -613,6 +630,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -653,6 +671,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -669,6 +688,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -720,6 +740,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -736,6 +757,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -776,6 +798,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -792,6 +815,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -844,6 +868,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -860,6 +885,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -901,6 +927,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -917,6 +944,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -971,6 +999,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -987,6 +1016,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -1027,6 +1057,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -1043,6 +1074,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -1097,6 +1129,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -1113,6 +1146,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -1153,6 +1187,7 @@ test.group('VineRecord | clone', () => {
         properties: [
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'username',
             propertyName: 'username',
             bail: true,
@@ -1169,6 +1204,7 @@ test.group('VineRecord | clone', () => {
           },
           {
             type: 'literal',
+            subtype: 'string',
             fieldName: 'password',
             propertyName: 'password',
             bail: true,
@@ -1211,6 +1247,7 @@ test.group('VineRecord | applying rules', () => {
       parseFnId: undefined,
       each: {
         type: 'literal',
+        subtype: 'string',
         fieldName: '*',
         propertyName: '*',
         bail: true,
@@ -1255,6 +1292,7 @@ test.group('VineRecord | applying rules', () => {
       parseFnId: undefined,
       each: {
         type: 'literal',
+        subtype: 'string',
         fieldName: '*',
         propertyName: '*',
         bail: true,
@@ -1299,6 +1337,7 @@ test.group('VineRecord | applying rules', () => {
       parseFnId: undefined,
       each: {
         type: 'literal',
+        subtype: 'string',
         fieldName: '*',
         propertyName: '*',
         bail: true,
@@ -1344,6 +1383,7 @@ test.group('VineRecord | applying rules', () => {
       parseFnId: undefined,
       each: {
         type: 'literal',
+        subtype: 'string',
         fieldName: '*',
         propertyName: '*',
         bail: true,

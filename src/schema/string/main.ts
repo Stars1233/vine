@@ -8,7 +8,7 @@
  */
 
 import { BaseLiteralType } from '../base/literal.js'
-import { IS_OF_TYPE, UNIQUE_NAME } from '../../symbols.js'
+import { IS_OF_TYPE, SUBTYPE, UNIQUE_NAME } from '../../symbols.js'
 import type {
   Validation,
   AlphaOptions,
@@ -99,6 +99,11 @@ export class VineString extends BaseLiteralType<string, string, string> {
     alphaNumeric: alphaNumericRule,
     normalizeEmail: normalizeEmailRule,
   };
+
+  /**
+   * The subtype of the literal schema field
+   */
+  [SUBTYPE] = 'string';
 
   /**
    * The property must be implemented for "unionOfTypes"

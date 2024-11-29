@@ -10,6 +10,7 @@
 import { enumRule } from './rules.js'
 import { BaseLiteralType } from '../base/literal.js'
 import type { EnumLike, FieldOptions, Validation } from '../../types.js'
+import { SUBTYPE } from '../../symbols.js'
 
 /**
  * VineNativeEnum represents a enum data type that performs validation
@@ -30,7 +31,12 @@ export class VineNativeEnum<Values extends EnumLike> extends BaseLiteralType<
     enum: enumRule,
   }
 
-  #values: Values
+  #values: Values;
+
+  /**
+   * The subtype of the literal schema field
+   */
+  [SUBTYPE] = 'enum'
 
   constructor(values: Values, options?: FieldOptions, validations?: Validation<any>[]) {
     super(options, validations || [enumRule({ choices: Object.values(values) })])

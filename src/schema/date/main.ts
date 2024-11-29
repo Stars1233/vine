@@ -9,7 +9,7 @@
 
 import dayjs from 'dayjs'
 import { BaseLiteralType } from '../base/literal.js'
-import { IS_OF_TYPE, UNIQUE_NAME } from '../../symbols.js'
+import { IS_OF_TYPE, SUBTYPE, UNIQUE_NAME } from '../../symbols.js'
 import {
   dateRule,
   afterRule,
@@ -63,6 +63,11 @@ export class VineDate extends BaseLiteralType<string | number, Date, Date> {
    * The property must be implemented for "unionOfTypes"
    */
   [UNIQUE_NAME] = 'vine.date';
+
+  /**
+   * The subtype of the literal schema field
+   */
+  [SUBTYPE] = 'date';
 
   /**
    * Checks if the value is of date type. The method must be

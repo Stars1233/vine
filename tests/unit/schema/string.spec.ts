@@ -58,6 +58,7 @@ test.group('VineString', () => {
     const schema = vine.string()
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -79,6 +80,7 @@ test.group('VineString', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: true,
@@ -100,6 +102,7 @@ test.group('VineString', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -121,6 +124,7 @@ test.group('VineString', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -141,6 +145,7 @@ test.group('VineString', () => {
     const schema = vine.string().transform(() => {})
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -177,6 +182,7 @@ test.group('VineString | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -193,6 +199,7 @@ test.group('VineString | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -215,6 +222,7 @@ test.group('VineString | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -231,6 +239,7 @@ test.group('VineString | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: true,
@@ -253,6 +262,7 @@ test.group('VineString | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -269,6 +279,7 @@ test.group('VineString | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -291,6 +302,7 @@ test.group('VineString | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -307,6 +319,7 @@ test.group('VineString | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -329,6 +342,7 @@ test.group('VineString | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -346,6 +360,7 @@ test.group('VineString | clone', () => {
 
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -369,6 +384,7 @@ test.group('VineString | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: true,
@@ -385,6 +401,7 @@ test.group('VineString | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: true,
@@ -412,6 +429,7 @@ test.group('VineString | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -433,6 +451,7 @@ test.group('VineString | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: true,
@@ -465,6 +484,7 @@ test.group('VineString | clone', () => {
 
     assert.deepEqual(schema[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -482,6 +502,7 @@ test.group('VineString | clone', () => {
     })
     assert.deepEqual(schema1[PARSE]('*', refsBuilder(), { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: true,
@@ -515,6 +536,7 @@ test.group('VineString | applying rules', () => {
 
     assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
       type: 'literal',
+      subtype: 'string',
       fieldName: '*',
       propertyName: '*',
       allowNull: false,
@@ -724,6 +746,7 @@ test.group('VineString | applying rules', () => {
 
       assert.deepEqual(schema[PARSE]('*', refs, { toCamelCase: false }), {
         type: 'literal',
+        subtype: 'string',
         fieldName: '*',
         propertyName: '*',
         allowNull: false,
