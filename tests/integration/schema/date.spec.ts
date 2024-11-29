@@ -121,7 +121,7 @@ test.group('VineDate', () => {
           }),
           data,
         }),
-      'Invalid datetime value "foo" value provided to the equals rule'
+      'Invalid datetime value "foo" provided to the equals rule'
     )
 
     await assert.rejects(
@@ -132,7 +132,7 @@ test.group('VineDate', () => {
           }),
           data,
         }),
-      'Invalid datetime value "foo" value provided to the after rule'
+      'Invalid datetime value "foo" provided to the after rule'
     )
 
     await assert.rejects(
@@ -143,7 +143,7 @@ test.group('VineDate', () => {
           }),
           data,
         }),
-      'Invalid datetime value "foo" value provided to the before rule'
+      'Invalid datetime value "foo" provided to the before rule'
     )
 
     await assert.rejects(
@@ -154,7 +154,7 @@ test.group('VineDate', () => {
           }),
           data,
         }),
-      'Invalid datetime value "foo" value provided to the beforeOrEqual rule'
+      'Invalid datetime value "foo" provided to the beforeOrEqual rule'
     )
 
     await assert.rejects(
@@ -165,7 +165,7 @@ test.group('VineDate', () => {
           }),
           data,
         }),
-      'Invalid datetime value "foo" value provided to the afterOrEqual rule'
+      'Invalid datetime value "foo" provided to the afterOrEqual rule'
     )
   })
 })

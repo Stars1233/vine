@@ -103,7 +103,7 @@ export const equalsRule = createRule<
 
   const expectedDateTime = dayjs(expectedValue, format, true)
   if (!expectedDateTime.isValid()) {
-    throw new Error(`Invalid datetime value "${expectedValue}" value provided to the equals rule`)
+    throw new Error(`Invalid datetime value "${expectedValue}" provided to the equals rule`)
   }
 
   /**
@@ -153,7 +153,7 @@ export const afterRule = createRule<
         : dayjs(expectedValue, format, true)
 
   if (!expectedDateTime.isValid()) {
-    throw new Error(`Invalid datetime value "${expectedValue}" value provided to the after rule`)
+    throw new Error(`Invalid datetime value "${expectedValue}" provided to the after rule`)
   }
 
   /**
@@ -203,9 +203,7 @@ export const afterOrEqualRule = createRule<
         : dayjs(expectedValue, format, true)
 
   if (!expectedDateTime.isValid()) {
-    throw new Error(
-      `Invalid datetime value "${expectedValue}" value provided to the afterOrEqual rule`
-    )
+    throw new Error(`Invalid datetime value "${expectedValue}" provided to the afterOrEqual rule`)
   }
 
   /**
@@ -256,7 +254,7 @@ export const beforeRule = createRule<
         : dayjs(expectedValue, format, true)
 
   if (!expectedDateTime.isValid()) {
-    throw new Error(`Invalid datetime value "${expectedValue}" value provided to the before rule`)
+    throw new Error(`Invalid datetime value "${expectedValue}" provided to the before rule`)
   }
 
   /**
@@ -306,9 +304,7 @@ export const beforeOrEqualRule = createRule<
         : dayjs(expectedValue, format, true)
 
   if (!expectedDateTime.isValid()) {
-    throw new Error(
-      `Invalid datetime value "${expectedValue}" value provided to the beforeOrEqual rule`
-    )
+    throw new Error(`Invalid datetime value "${expectedValue}" provided to the beforeOrEqual rule`)
   }
 
   /**
