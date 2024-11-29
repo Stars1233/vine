@@ -168,4 +168,35 @@ test.group('VineDate', () => {
       'Invalid datetime value "foo" provided to the afterOrEqual rule'
     )
   })
+
+  test('allow ISO 8601 date', async ({ assert }) => {
+    const schema = vine.object({
+      created_at: vine.date({ formats: ['iso8601'] }),
+    })
+
+    const data = { created_at: '2018-04-04T16:00:00.000Z' }
+    const result = await vine.validate({ schema, data })
+    assert.instanceOf(result.created_at, Date)
+    assert.equal(result.created_at.getDate(), '4')
+    assert.equal(result.created_at.getMonth(), '3')
+    assert.equal(result.created_at.getFullYear(), '2018')
+    assert.equal(result.created_at.getSeconds(), '00')
+    assert.equal(result.created_at.getUTCHours(), '16')
+    assert.equal(result.created_at.getUTCMinutes(), '00')
+    assert.equal(result.created_at.toISOString(), '2018-04-04T16:00:00.000Z')
+  })
+
+  test('allow other formats alongside iso', async ({ assert }) => {
+    const schema = vine.object({
+      created_at: vine.date({ formats: ['iso8601', 'YYYY/MM/DD'] }),
+    })
+
+    const data = { created_at: '2018/04/04' }
+    const result = await vine.validate({ schema, data })
+
+    assert.instanceOf(result.created_at, Date)
+    assert.equal(result.created_at.getDate(), '4')
+    assert.equal(result.created_at.getMonth(), '3')
+    assert.equal(result.created_at.getFullYear(), '2018')
+  })
 })

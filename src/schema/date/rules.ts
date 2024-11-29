@@ -37,10 +37,11 @@ export const dateRule = createRule<Partial<DateFieldOptions>>((value, options, f
   }
 
   let isTimestampAllowed = false
+  let isISOAllowed = false
   let formats: DateEqualsOptions['format'] = options.formats || DEFAULT_DATE_FORMATS
 
   /**
-   * DayJS mutates the formats property under the hood. There
+   * DayJS mutates the formats property under the hood. Therefore
    * we have to create a shallow clone before passing formats.
    *
    * https://github.com/iamkun/dayjs/issues/2136
@@ -48,22 +49,37 @@ export const dateRule = createRule<Partial<DateFieldOptions>>((value, options, f
   if (Array.isArray(formats)) {
     formats = [...formats]
     isTimestampAllowed = formats.includes('x')
+    isISOAllowed = formats.includes('iso8601')
   } else if (typeof formats !== 'string') {
     formats = { ...formats }
     isTimestampAllowed = formats.format === 'x'
+    isISOAllowed = formats.format === 'iso'
   }
 
   const valueAsNumber = isTimestampAllowed ? helpers.asNumber(value) : value
 
+  let dateTime: dayjs.Dayjs | undefined
+
   /**
-   * The timestamp validation does not work with formats array
-   * when using "customFormatsPlugin". Therefore we have
-   * to create dayjs instance without formats option
+   * The timestamp validation does not work with formats array.
+   * Therefore we validate is separately without passing any
+   * formats.
+   *
+   * Otherwise we parse the date with formats
    */
-  const dateTime =
-    isTimestampAllowed && !Number.isNaN(valueAsNumber)
-      ? dayjs(valueAsNumber)
-      : dayjs(value, formats, true)
+  if (isTimestampAllowed && !Number.isNaN(valueAsNumber)) {
+    dateTime = dayjs(valueAsNumber)
+  } else {
+    dateTime = dayjs(value, formats, true)
+  }
+
+  /**
+   * If datetime is invalid and the ISO format is allowed,
+   * then we reattempt to parse the date without formats
+   */
+  if (!dateTime.isValid() && isISOAllowed) {
+    dateTime = dayjs(value)
+  }
 
   /**
    * Ensure post parsing the datetime instance is valid
