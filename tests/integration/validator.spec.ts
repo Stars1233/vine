@@ -395,3 +395,87 @@ test.group('Validator | tryValidator', () => {
     }
   })
 })
+
+test.group('Validator | regression', () => {
+  test('validate field names with dots inside them', async ({ assert }) => {
+    const author = vine.object({
+      'hub.mode': vine.literal('subscribe'),
+      'hub.challenge': vine.number(),
+      'hub.verify_token': vine.literal('env'),
+    })
+
+    const validator = vine.compile(author)
+    await assert.validationOutput(
+      validator.validate({
+        'hub.mode': 'subscribe',
+        'hub.challenge': 1158201444,
+        'hub.verify_token': 'env',
+      }),
+      {
+        'hub.mode': 'subscribe',
+        'hub.challenge': 1158201444,
+        'hub.verify_token': 'env',
+      }
+    )
+  })
+
+  test('validate field names with hyphens inside them', async ({ assert }) => {
+    const author = vine
+      .object({
+        'aws-address': vine.string(),
+      })
+      .toCamelCase()
+
+    const validator = vine.compile(author)
+    await assert.validationOutput(
+      validator.validate({
+        'aws-address': 'foo',
+      }),
+      {
+        awsAddress: 'foo',
+      }
+    )
+  })
+
+  test('allow object keys to be numeric', async ({ assert }) => {
+    const author = vine
+      .object({
+        days_of_week: vine.object({
+          '0': vine.string(),
+          '1': vine.string(),
+          '2': vine.string(),
+          '3': vine.string(),
+          '4': vine.string(),
+          '5': vine.string(),
+          '6': vine.string(),
+        }),
+      })
+      .toCamelCase()
+
+    const validator = vine.compile(author)
+    await assert.validationOutput(
+      validator.validate({
+        days_of_week: {
+          0: 'Sunday',
+          1: 'Monday',
+          2: 'Tuesday',
+          3: 'Wednesday',
+          4: 'Thursday',
+          5: 'Friday',
+          6: 'Saturday',
+        },
+      }),
+      {
+        daysOfWeek: {
+          0: 'Sunday',
+          1: 'Monday',
+          2: 'Tuesday',
+          3: 'Wednesday',
+          4: 'Thursday',
+          5: 'Friday',
+          6: 'Saturday',
+        },
+      }
+    )
+  })
+})
