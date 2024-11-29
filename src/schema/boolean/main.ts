@@ -24,7 +24,7 @@ export class VineBoolean extends BaseLiteralType<boolean | string | number, bool
     boolean: booleanRule,
   }
 
-  protected declare options: FieldOptions & { strict?: boolean };
+  declare protected options: FieldOptions & { strict?: boolean };
 
   /**
    * The property must be implemented for "unionOfTypes"

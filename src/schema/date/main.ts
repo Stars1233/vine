@@ -76,7 +76,7 @@ export class VineDate extends BaseLiteralType<string | number, Date, Date> {
     return dayjs(value, this.options.formats || DEFAULT_DATE_FORMATS, true).isValid()
   }
 
-  protected declare options: FieldOptions & DateFieldOptions
+  declare protected options: FieldOptions & DateFieldOptions
 
   constructor(options?: Partial<FieldOptions> & DateFieldOptions, validations?: Validation<any>[]) {
     super(options, validations || [dateRule(options || {})])
