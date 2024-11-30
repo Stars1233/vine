@@ -11,6 +11,16 @@ import { test } from '@japa/runner'
 import vine from '../../../index.js'
 
 test.group('VineObject | flat object', () => {
+  test('fail to construct schema when object is instantiated without object', async ({
+    assert,
+  }) => {
+    assert.throws(
+      // @ts-expect-error
+      () => vine.object(),
+      'Missing properties for "vine.object". Use an empty object if you do not want to validate any specific fields'
+    )
+  })
+
   test('fail when value is not an object', async ({ assert }) => {
     const schema = vine.object({
       username: vine.string(),

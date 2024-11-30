@@ -97,6 +97,11 @@ export class VineObject<
   }
 
   constructor(properties: Properties, options?: FieldOptions, validations?: Validation<any>[]) {
+    if (!properties) {
+      throw new Error(
+        'Missing properties for "vine.object". Use an empty object if you do not want to validate any specific fields'
+      )
+    }
     super(options, validations)
     this.#properties = properties
   }
