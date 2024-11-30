@@ -29,7 +29,9 @@ export class ValidationError extends Error {
   ) {
     super('Validation failure', options)
     const ErrorConstructor = this.constructor as typeof ValidationError
-    Error.captureStackTrace(this, ErrorConstructor)
+    if ('captureStackTrace' in Error) {
+      Error.captureStackTrace(this, ErrorConstructor)
+    }
   }
 
   get [Symbol.toStringTag]() {
