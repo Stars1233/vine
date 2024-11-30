@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import type { RefsStore } from '@vinejs/compiler/types'
+import type { FieldContext, RefsStore } from '@vinejs/compiler/types'
 
 import { ITYPE, OTYPE, COTYPE, PARSE, VALIDATION } from '../../symbols.js'
 import type {
@@ -18,8 +18,13 @@ import type {
   CompilerNodes,
   ParserOptions,
   ConstructableSchema,
+  ComparisonOperators,
+  ArrayComparisonOperators,
+  NumericComparisonOperators,
 } from '../../types.js'
 import Macroable from '@poppinss/macroable'
+import { requiredWhen } from './rules.js'
+import { helpers } from '../../vine/helpers.js'
 
 /**
  * Base schema type with only modifiers applicable on all the schema types.
@@ -119,9 +124,186 @@ export class OptionalModifier<
   Schema[typeof COTYPE] | undefined
 > {
   #parent: Schema
-  constructor(parent: Schema) {
+
+  /**
+   * Optional modifier validations list
+   */
+  validations: Validation<any>[]
+
+  constructor(parent: Schema, validations?: Validation<any>[]) {
     super()
     this.#parent = parent
+    this.validations = validations || []
+  }
+
+  /**
+   * Shallow clones the validations. Since, there are no API's to mutate
+   * the validation options, we can safely copy them by reference.
+   */
+  protected cloneValidations(): Validation<any>[] {
+    return this.validations.map((validation) => {
+      return {
+        options: validation.options,
+        rule: validation.rule,
+      }
+    })
+  }
+
+  /**
+   * Compiles validations
+   */
+  protected compileValidations(refs: RefsStore) {
+    return this.validations.map((validation) => {
+      return {
+        ruleFnId: refs.track({
+          validator: validation.rule.validator,
+          options: validation.options,
+        }),
+        implicit: validation.rule.implicit,
+        isAsync: validation.rule.isAsync,
+      }
+    })
+  }
+
+  /**
+   * Push a validation to the validations chain.
+   */
+  use(validation: Validation<any> | RuleBuilder): this {
+    this.validations.push(VALIDATION in validation ? validation[VALIDATION]() : validation)
+    return this
+  }
+
+  /**
+   * Define a callback to conditionally require a field at
+   * runtime.
+   *
+   * The callback method should return "true" to mark the
+   * field as required, or "false" to skip the required
+   * validation
+   */
+  requiredWhen<Operator extends ComparisonOperators>(
+    otherField: string,
+    operator: Operator,
+    expectedValue: Operator extends ArrayComparisonOperators
+      ? (string | number | boolean)[]
+      : Operator extends NumericComparisonOperators
+        ? number
+        : string | number | boolean
+  ): this
+  requiredWhen(callback: (field: FieldContext) => boolean): this
+  requiredWhen(
+    otherField: string | ((field: FieldContext) => boolean),
+    operator?: ComparisonOperators,
+    expectedValue?: any
+  ) {
+    /**
+     * The equality check if self implemented
+     */
+    if (typeof otherField === 'function') {
+      return this.use(requiredWhen(otherField))
+    }
+
+    /**
+     * Creating the checker function based upon the
+     * operator used for the comparison
+     */
+    let checker: (value: any) => boolean
+    switch (operator!) {
+      case '=':
+        checker = (value) => value === expectedValue
+        break
+      case '!=':
+        checker = (value) => value !== expectedValue
+        break
+      case 'in':
+        checker = (value) => expectedValue.includes(value)
+        break
+      case 'notIn':
+        checker = (value) => !expectedValue.includes(value)
+        break
+      case '>':
+        checker = (value) => value > expectedValue
+        break
+      case '<':
+        checker = (value) => value < expectedValue
+        break
+      case '>=':
+        checker = (value) => value >= expectedValue
+        break
+      case '<=':
+        checker = (value) => value <= expectedValue
+    }
+
+    /**
+     * Registering rule with custom implementation
+     */
+    return this.use(
+      requiredWhen((field) => {
+        const otherFieldValue = helpers.getNestedValue(otherField, field)
+        return checker(otherFieldValue)
+      })
+    )
+  }
+
+  /**
+   * Mark the field under validation as required when all
+   * the other fields are present with value other
+   * than `undefined` or `null`.
+   */
+  requiredIfExists(fields: string | string[]) {
+    const fieldsToExist = Array.isArray(fields) ? fields : [fields]
+    return this.use(
+      requiredWhen((field) => {
+        return fieldsToExist.every((otherField) => {
+          return helpers.exists(helpers.getNestedValue(otherField, field))
+        })
+      })
+    )
+  }
+
+  /**
+   * Mark the field under validation as required when any
+   * one of the other fields are present with non-nullable
+   * value.
+   */
+  requiredIfAnyExists(fields: string[]) {
+    return this.use(
+      requiredWhen((field) => {
+        return fields.some((otherField) =>
+          helpers.exists(helpers.getNestedValue(otherField, field))
+        )
+      })
+    )
+  }
+
+  /**
+   * Mark the field under validation as required when all
+   * the other fields are missing or their value is
+   * `undefined` or `null`.
+   */
+  requiredIfMissing(fields: string | string[]) {
+    const fieldsToExist = Array.isArray(fields) ? fields : [fields]
+    return this.use(
+      requiredWhen((field) => {
+        return fieldsToExist.every((otherField) =>
+          helpers.isMissing(helpers.getNestedValue(otherField, field))
+        )
+      })
+    )
+  }
+
+  /**
+   * Mark the field under validation as required when any
+   * one of the other fields are missing.
+   */
+  requiredIfAnyMissing(fields: string[]) {
+    return this.use(
+      requiredWhen((field) => {
+        return fields.some((otherField) =>
+          helpers.isMissing(helpers.getNestedValue(otherField, field))
+        )
+      })
+    )
   }
 
   /**
@@ -129,7 +311,7 @@ export class OptionalModifier<
    * and wraps it inside the optional modifier
    */
   clone(): this {
-    return new OptionalModifier(this.#parent.clone()) as this
+    return new OptionalModifier(this.#parent.clone(), this.cloneValidations()) as this
   }
 
   /**
@@ -139,6 +321,7 @@ export class OptionalModifier<
     const output = this.#parent[PARSE](propertyName, refs, options)
     if (output.type !== 'union') {
       output.isOptional = true
+      output.validations = output.validations.concat(this.compileValidations(refs))
     }
 
     return output

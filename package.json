@@ -52,7 +52,7 @@
     "benchmark": "^2.1.4",
     "c8": "^10.1.2",
     "del-cli": "^6.0.0",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "joi": "^17.13.3",
     "prettier": "^3.4.1",
     "release-it": "^17.10.0",
@@ -66,7 +66,7 @@
   "dependencies": {
     "@poppinss/macroable": "^1.0.3",
     "@types/validator": "^13.12.2",
-    "@vinejs/compiler": "^2.5.1",
+    "@vinejs/compiler": "^3.0.0",
     "camelcase": "^8.0.0",
     "dayjs": "^1.11.13",
     "dlv": "^1.1.3",
